@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorView" customModule="Weather_Application" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="BL8-Ln-PVB"/>
+                <outlet property="errorIcon" destination="lzK-9o-9cu" id="B9e-ao-r6q"/>
+                <outlet property="errorText" destination="MWd-cO-AR1" id="gwz-Dl-lTc"/>
+                <outlet property="reloadBut" destination="V91-fK-inu" id="Tx2-yN-P7s"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="data_load_error" translatesAutoresizingMaskIntoConstraints="NO" id="lzK-9o-9cu">
+                    <rect key="frame" x="125" y="254" width="164" height="164"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lzK-9o-9cu" secondAttribute="height" multiplier="1:1" id="q5Y-xH-W05"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error occured while loading data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWd-cO-AR1">
+                    <rect key="frame" x="62" y="438" width="290" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V91-fK-inu">
+                    <rect key="frame" x="166" y="480.5" width="82" height="44"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="GzV-t1-gOj"/>
+                    </constraints>
+                    <state key="normal" title="Reload">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="handleReload:" destination="-1" eventType="touchUpInside" id="hZD-JZ-jWB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MWd-cO-AR1" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.7" id="1WU-57-Gba"/>
+                <constraint firstItem="V91-fK-inu" firstAttribute="width" secondItem="lzK-9o-9cu" secondAttribute="width" multiplier="0.5" id="3Z5-k1-nSr"/>
+                <constraint firstItem="V91-fK-inu" firstAttribute="centerX" secondItem="MWd-cO-AR1" secondAttribute="centerX" id="86d-9z-vU3"/>
+                <constraint firstItem="V91-fK-inu" firstAttribute="top" secondItem="MWd-cO-AR1" secondAttribute="bottom" constant="22" id="J2N-g7-K6d"/>
+                <constraint firstItem="lzK-9o-9cu" firstAttribute="bottom" secondItem="MWd-cO-AR1" secondAttribute="top" constant="-20" id="KPY-Ch-qCl"/>
+                <constraint firstItem="MWd-cO-AR1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MlB-2D-hzG"/>
+                <constraint firstItem="lzK-9o-9cu" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.2" id="Wt9-7w-Opw"/>
+                <constraint firstItem="MWd-cO-AR1" firstAttribute="centerX" secondItem="lzK-9o-9cu" secondAttribute="centerX" id="pDr-f3-uMr"/>
+                <constraint firstItem="lzK-9o-9cu" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="y3i-JW-Dbn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="133" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="data_load_error" width="45" height="45"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
